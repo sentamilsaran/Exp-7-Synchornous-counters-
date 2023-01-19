@@ -51,11 +51,38 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 
 
 ### PROGRAM 
-/*
+
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by:AKASH R 
+RegisterNumber: 22008463 
+UP COUNTER
+
+module upcount(clock,reset,up);
+input clock,reset;
+output reg[0:2] up;
+always@(posedge clock or posedge reset)
+begin
+if(reset)
+up=3'b 000;
+else
+up=up+1;
+end
+endmodule
+
+
+DOWN COUNTER
+
+module downcount(clock,reset,down);
+input clock,reset;
+output reg[2:0] down;
+always@(posedge clock or posedge reset)
+begin
+if(reset)
+down=3'b 111;
+else
+down=down-1;
+end
+endmodule.
 
 
 
@@ -63,6 +90,8 @@ RegisterNumber:
 
 
 ### RTL LOGIC UP COUNTER AND DOWN COUNTER  
+![WhatsApp Image 2023-01-19 at 20 58 02](https://user-images.githubusercontent.com/123085535/213485240-865970e5-1925-44a8-9483-eaba040f5b8c.jpg)
+![WhatsApp Image 2023-01-19 at 20 58 43](https://user-images.githubusercontent.com/123085535/213485287-3a440c5e-ef26-4850-9c20-dd35d2107405.jpg)
 
 
 
@@ -74,15 +103,19 @@ RegisterNumber:
 
 ### TIMING DIGRAMS FOR COUNTER  
 
+![WhatsApp Image 2023-01-19 at 21 00 02](https://user-images.githubusercontent.com/123085535/213485394-05a9394d-6488-4306-aa5a-016c87156e5c.jpg)
 
 
 
 
 ### TRUTH TABLE 
+![WhatsApp Image 2023-01-19 at 21 01 04](https://user-images.githubusercontent.com/123085535/213485440-ad64b2c6-65a7-4d78-a048-576bdaddf4a4.jpg)
 
+![WhatsApp Image 2023-01-19 at 21 01 43](https://user-images.githubusercontent.com/123085535/213485492-ffd7c47c-6f3d-4445-8dec-a05bf0edd5ea.jpg)
 
 
 
 
 
 ### RESULTS 
+Thus 3 bit up and down counters is implemented and its functionality is validated.
